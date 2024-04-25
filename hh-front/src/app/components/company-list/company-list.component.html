@@ -1,0 +1,18 @@
+<div *ngIf="companies.length > 0; else noCompanies">
+  <h2>Companies</h2>
+
+  <ul>
+    <li *ngFor="let company of companies">
+      {{ company.name }}
+      <button (click)="showVacancies(company)">Show Vacancies</button>
+      <ul *ngIf="company.vacancies && company.vacancies.length > 0">
+        <li *ngFor="let vacancy of company.vacancies">
+          {{ vacancy.name }} - {{ vacancy.salary }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<ng-template #noCompanies>
+  <p>No companies found.</p>
+</ng-template>

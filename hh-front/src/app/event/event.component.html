@@ -1,0 +1,14 @@
+<body>
+<div class="card-container">
+  <div *ngFor="let event of events.slice(1),let i =index"  class="card">
+    <div class="card-header">
+      <p class="direction">{{event.eventName}}</p>
+      <h2 class="name">{{event.specialization}}</h2>
+      <a class="url" href="{{event.url}}">Ссылка</a>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<router-outlet></router-outlet>

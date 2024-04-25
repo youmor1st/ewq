@@ -1,0 +1,14 @@
+<body>
+<div class="card-container">
+  <div *ngFor="let course of courses.slice(1),let i =index"  class="card">
+    <div class="card-header">
+      <p class="direction">{{course.courseName}}</p>
+      <h2 class="name">{{course.specialization}}</h2>
+      <a class="url" href="{{course.url}}">Ссылка</a>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<router-outlet></router-outlet>
