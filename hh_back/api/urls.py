@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .serializers import RegistrationAPIView
 from .views import VacancyList, VacancyDetail
 from rest_framework_simplejwt import views as jwt_views
 
@@ -12,5 +13,7 @@ urlpatterns = [
     path('uservacancies/', views.getUserVacancies),
     path('vacancies/<int:pk>', VacancyDetail.as_view()),
     path('user/create/', views.create_user, name='create_user'),
-    path('token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair')
+    path('token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('register/', RegistrationAPIView.as_view(), name='registration'),
+
 ]

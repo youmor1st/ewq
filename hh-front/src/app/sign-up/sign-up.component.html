@@ -13,7 +13,7 @@
         <label for="password">Подтвердите пароль</label>
         <input [(ngModel)]="password"  type="password" id="password" name="password" required>
       </div>
-      <button (click)="signUp()" type="submit" class="btn">Submit</button>
+      <button (click)="signUp()" type="submit" class="btn"><a [routerLink]="['/login']">Submit</a></button>
     </form>
     <p>Есть аккаунт?<a [routerLink]="['/login']">Log in</a></p>
 </div>

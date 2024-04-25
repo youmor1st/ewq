@@ -12,7 +12,7 @@ import { EventComponent } from './event/event.component';
 const routes: Routes = [
   {path:'',component:MainPageComponent,children:[
     {path:'',redirectTo:'/',pathMatch:'full'},
-    {path:'',component:VacancyComponent},
+    {path:'vacancy',component:VacancyComponent},
     { path:'profile',component:ProfileComponent,},
     { path:'companies',component:CompanyComponent},
       { path:'courses',component:CourseComponent},

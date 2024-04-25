@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +21,11 @@ export class AuthService {
       {username:username, password:password}
     )
   }
-  
+  register(username: string, password: string): Observable<any> {
+    return this.client.post<any>(
+      `${this.BASE_URL}/api/register/`,
+      { username: username, password: password }
+    );
+  }
+
 }
